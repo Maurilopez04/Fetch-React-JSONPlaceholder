@@ -70,7 +70,7 @@ function Users() {
             className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
           >
             <h2 className="text-xl font-bold text-blue-700 mb-2">
-              {user.name}
+            <a href={`/user/${user.id}`}>{user.name}</a>
             </h2>
             <p className="text-gray-700 mb-2">
               <span className="font-bold">Usuario:</span> {user.username}
@@ -124,13 +124,13 @@ function Users() {
                         className="bg-gray-100 rounded-lg p-3 shadow"
                       >
                         <p className="text-sm text-blue-600">
-                          <span className="font-bold text-black">Titulo:</span> <a href={`/album/${album.id}`}>{album.title}</a>
+                          <span className="font-bold text-black">Titulo:</span> <a href={`/albums/${album.id}`}>{album.title}</a>
                         </p>
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-gray-500">Cargando comentarios...</p>
+                  <p className="text-gray-500">Cargando Albums...</p>
                 )}
               </div>
             )}

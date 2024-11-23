@@ -19,7 +19,7 @@ const Header = () => {
           {["Users"].map((item, index) => (
             <a
               key={index}
-              href={`${item.toLowerCase()}`}
+              href={`/${item.toLowerCase()}`}
               className="text-white text-lg font-medium hover:text-gray-200 transition duration-300 relative group"
             >
               {item}
